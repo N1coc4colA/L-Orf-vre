@@ -14,77 +14,67 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <link rel="stylesheet" href="styles/global.css">
   </head>
   <body>
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top border-bottom bg-body" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                  <img src="assets/favicon-light.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-                  L'ORFÈVRE
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="menu.html">Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="reservation.html">Réservation</a>
-                        </li>
-                    </ul>
+      <include href="templates/navbar.html"></include>
+    </header>
+    <main class="pt-5 vh-100">
+      <div class="container mt-5">
+        <form class="card" action="index.html">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6 col-12 mb-lg-0 mb-3">
+                <div class="input-group">
+                  <span class="input-group-text" id="res-name-lab" for="res-name">Nom</span>
+                  <input type="text" aria-label="Nom de famille" aria-describedby="res-name-lab" name="name" placeholder="John" class="form-control" id="res-name">
                 </div>
+              </div>
+              <div class="col-lg-6 col-12 mb-3">
+                <div class="input-group">
+                  <span class="input-group-text" id="res-surname-lab" for="res-surname">Prénom</span>
+                  <input type="text" aria-label="Prénom" aria-describedby="res-surname-lab" name="surname" placeholder="Doe" class="form-control" id="res-surname">
+                </div>
+              </div>
             </div>
-        </nav>
-      </header>
-      <main class="pt-3">
-      </main>
-    <footer class="bg-dark text-white text-center py-3">
-      <div class="container">
-        <div class="row align-items-center mb-2">
-          <div class="col-auto">
-            <a href="tel:+33243491859"><i class="fa-solid fa-square-phone"></i></a>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="res-mail-lab" for="res-mail">Mail</span>
+              <input type="email" class="form-control" id="res-mail" name="mail" placeholder="something@some.where" aria-label="E-Mail" aria-describedby="res-mail-lab">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="res-tel-lab" for="res-tel">Téléphone</span>
+              <input type="tel" class="form-control" id="res-tel" name="tel" placeholder="0123456789" maxlength="10" minlength="10" aria-label="Téléphone" aria-describedby="res-tel-lab">
+            </div>
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="res-time" id="res-time-lab">Heure</label>
+              <select class="form-select" id="res-time" name="time" aria-label="Téléphone" aria-describedby="res-time-lab">
+                <option selected>Choisissez...</option>
+                <option value="1">11:00</option>
+                <option value="2">11:30</option>
+                <option value="3">12:00</option>
+                <option value="4">12:30</option>
+                <option value="5">13:00</option>
+                <option value="6">13:30</option>
+              </select>
+            </div>
+            <div class="input-group mb-3">
+              <label for="res-date" class="input-group-text" id="res-date-lab">Date</label>
+              <input type="date" class="form-control" id="res-date" name="date" aria-label="Date" aria-describedby="res-date-lab">
+            </div>
+            <button type="submit" aria-label="Réserver" class="btn btn-success align-self-end">
+              <i class="bi bi-calendar-check-fill"></i>
+              Réserver
+            </button>
           </div>
-          <div class="col text-start">
-            <p class="mb-0">Téléphone: <a href="tel:+33243491859">+33243491859</a></p>
-          </div>
-        </div>
-        <div class="row align-items-center mb-2">
-          <div class="col-auto">
-            <a href="mailto:orfevrelaval@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-          </div>
-          <div class="col text-start">
-            <p class="mb-0">Mail: <a href="mailto:orfevrelaval@gmail.com">orfevrelaval@gmail.com</a></p>
-          </div>
-        </div>
-        <div class="row align-items-center mb-2">
-          <div class="col-auto">
-            <a href="https://www.facebook.com/OrfevreLaval/"><i class="fa-brands fa-square-facebook"></i></a>
-          </div>
-          <div class="col text-start">
-            <p class="mb-0">Visiter <a href="https://www.facebook.com/OrfevreLaval/">la page Facebook</a></p>
-          </div>
-        </div>
-        <div class="row align-items-center">
-          <div class="col-auto">
-            <a href="geo:48.0681001,-0.7746813,597?q=L'Orfèvre"><i class="fa-solid fa-location-dot"></i></a>
-          </div>
-          <div class="col text-start">
-            <p class="mb-0">Voir <a href="https://www.google.com/maps/dir/?api=1&destination=48.0683%2C-0.77209">sur Google Maps</a></p>
-          </div>
-        </div>
+        </form>       
       </div>
-      
-      <p>GPLv3+, Images pouvant être sujettes à droit d'auteur.</p>
-    </footer>
+    </main>
+    <include href="templates/footer.html"></include>
+    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
