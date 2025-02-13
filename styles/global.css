@@ -3,8 +3,24 @@
     font-family: "Kanit", serif;
 }
 
+.navbar-nav
+{
+  color: var(--secondary-color);
+}
+
 .navbar-brand
 {
     font-family: "Outfit", serif;
     font-weight: 900;
+}
+
+.limit-height
+{
+  height: 40vh;
+}
+
+.img-cover
+{
+  width: 100%;
+  object-fit: cover;
 }
