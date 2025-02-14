@@ -8,9 +8,13 @@
   color: var(--secondary-color);
 }
 
+.outfit-font
+{
+  font-family: "Outfit", serif;
+}
+
 .navbar-brand
 {
-    font-family: "Outfit", serif;
     font-weight: 900;
 }
 
@@ -23,4 +27,18 @@
 {
   width: 100%;
   object-fit: cover;
+}
+
+.banner
+{
+  object-fit: cover;
+  height: 70vh;
+  width: 100%;
+}
+
+.round-blur
+{
+  backdrop-filter: blur(5px);
+  background-color: rgba(255,255,255,0.45);
+  border-radius: 5px;
 }
