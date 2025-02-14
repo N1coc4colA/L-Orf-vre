@@ -18,6 +18,21 @@
     font-weight: 900;
 }
 
+.text-shadowed
+{
+    text-shadow: black 0 0 2px;
+}
+
+h1, h2, footer a
+{
+  color: #eae6ca;
+}
+
+.color-white
+{
+  color: white;
+}
+
 .limit-height
 {
   height: 40vh;
