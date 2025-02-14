@@ -88,3 +88,25 @@ h1, h2, footer a
     width: 100%;
   }
 }
+
+.card-header-tabs .nav-link.active
+{
+  color: #eae6ca;
+  font-weight: bold;
+}
+
+.card-header
+{
+  --bs-card-cap-bg: #ffffff24;
+}
+
+.card-header-tabs .nav-link
+{
+  --bs-nav-link-color: white;
+}
+
+.card-header-tabs .nav-link:hover
+{
+  --bs-nav-link-hover-color: black;
+  background-color: white;
+}
